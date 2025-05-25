@@ -1,90 +1,153 @@
-// Product data with enhanced demo t-shirts
+// Product data with Uniqlo-style information
 const products = [
     {
         id: 1,
-        name: "Classic White Essential",
-        description: "Premium 100% organic cotton tee with perfect fit and ultra-soft feel",
-        price: 24.99,
-        originalPrice: 29.99,
-        color: "#ffffff",
+        name: "SUPIMA® Cotton T-Shirt",
+        category: "UNISEX, XXS-3XL",
+        price: 19.90,
+        originalPrice: null,
+        colors: [
+            { name: "White", hex: "#ffffff" },
+            { name: "Light Gray", hex: "#e8e8e8" },
+            { name: "Dark Gray", hex: "#666666" },
+            { name: "Black", hex: "#000000" },
+            { name: "Navy", hex: "#1a237e" },
+            { name: "Brown", hex: "#8d6e63" }
+        ],
+        rating: 4.7,
+        reviewCount: 737,
+        offer: "Limited-Time Offer until 5/29",
         gradient: "linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%)",
-        badge: "Bestseller",
-        category: "essentials",
         image: "images/b36155f5-bf23-4cfe-8c0a-e7d4c648c091.png"
     },
     {
         id: 2,
-        name: "Midnight Black Premium",
-        description: "Luxurious black tee with superior fabric quality and modern cut",
-        price: 27.99,
-        originalPrice: 32.99,
-        color: "#2c3e50",
-        gradient: "linear-gradient(135deg, #2c3e50 0%, #34495e 100%)",
-        badge: "Premium",
-        category: "premium",
-        image: "images/9b056001-0ce9-470f-9633-3fc9a45ee3fa.png"
+        name: "AIRism Cotton Oversized T-Shirt | Half-Sleeve",
+        category: "UNISEX, XXS-3XL",
+        price: 19.90,
+        originalPrice: null,
+        colors: [
+            { name: "White", hex: "#ffffff" },
+            { name: "Light Blue", hex: "#81d4fa" },
+            { name: "Gray", hex: "#9e9e9e" },
+            { name: "Black", hex: "#000000" }
+        ],
+        rating: 4.8,
+        reviewCount: 999,
+        offer: null,
+        gradient: "linear-gradient(135deg, #81d4fa 0%, #4fc3f7 100%)",
+        image: null
     },
     {
         id: 3,
-        name: "Ocean Blue Comfort",
-        description: "Breathable cotton blend in stunning ocean blue with relaxed fit",
-        price: 22.99,
-        color: "#3498db",
-        gradient: "linear-gradient(135deg, #3498db 0%, #2980b9 100%)",
-        category: "comfort"
+        name: "AIRism Cotton T-Shirt | Striped | Contrast Trim",
+        category: "MEN, XS-3XL",
+        price: 9.90,
+        originalPrice: null,
+        colors: [
+            { name: "White/Navy", hex: "#ffffff" },
+            { name: "Black/White", hex: "#000000" }
+        ],
+        rating: 4.8,
+        reviewCount: 32,
+        offer: "Limited-Time Offer until 5/29",
+        gradient: "linear-gradient(135deg, #2c3e50 0%, #34495e 100%)",
+        image: null
     },
     {
         id: 4,
-        name: "Forest Green Eco",
-        description: "Sustainable bamboo-cotton blend tee in earthy forest green",
-        price: 29.99,
-        color: "#27ae60",
-        gradient: "linear-gradient(135deg, #27ae60 0%, #229954 100%)",
-        badge: "Eco-Friendly",
-        category: "eco"
+        name: "AIRism Cotton T-Shirt",
+        category: "MEN, XS-3XL",
+        price: 9.90,
+        originalPrice: null,
+        colors: [
+            { name: "White", hex: "#ffffff" },
+            { name: "Gray", hex: "#9e9e9e" },
+            { name: "Black", hex: "#000000" },
+            { name: "Navy", hex: "#1a237e" }
+        ],
+        rating: 4.4,
+        reviewCount: 29,
+        offer: "Limited-Time Offer until 5/29",
+        gradient: "linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%)",
+        image: null
     },
     {
         id: 5,
-        name: "Sunset Orange Vintage",
-        description: "Retro-inspired tee with vintage wash and comfortable vintage fit",
-        price: 26.99,
-        color: "#e67e22",
-        gradient: "linear-gradient(135deg, #e67e22 0%, #d35400 100%)",
-        badge: "Vintage",
-        category: "vintage"
+        name: "Dry Pique Short Sleeve Polo Shirt",
+        category: "MEN, XS-3XL",
+        price: 14.90,
+        originalPrice: null,
+        colors: [
+            { name: "White", hex: "#ffffff" },
+            { name: "Navy", hex: "#1a237e" },
+            { name: "Black", hex: "#000000" },
+            { name: "Gray", hex: "#9e9e9e" }
+        ],
+        rating: 4.6,
+        reviewCount: 156,
+        offer: null,
+        gradient: "linear-gradient(135deg, #1a237e 0%, #303f9f 100%)",
+        image: null
     },
     {
         id: 6,
-        name: "Royal Purple Elite",
-        description: "Sophisticated purple tee with premium fabric and elegant design",
-        price: 31.99,
-        color: "#9b59b6",
-        gradient: "linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%)",
-        badge: "Elite",
-        category: "premium"
+        name: "Heattech Crew Neck Long Sleeve T-Shirt",
+        category: "MEN, XS-3XL",
+        price: 12.90,
+        originalPrice: null,
+        colors: [
+            { name: "White", hex: "#ffffff" },
+            { name: "Black", hex: "#000000" },
+            { name: "Gray", hex: "#9e9e9e" },
+            { name: "Navy", hex: "#1a237e" }
+        ],
+        rating: 4.5,
+        reviewCount: 89,
+        offer: null,
+        gradient: "linear-gradient(135deg, #9e9e9e 0%, #757575 100%)",
+        image: null
     },
     {
         id: 7,
-        name: "Crimson Red Bold",
-        description: "Eye-catching red tee perfect for making a statement with confidence",
-        price: 25.99,
-        color: "#e74c3c",
+        name: "UT Graphic T-Shirt (Short Sleeve)",
+        category: "UNISEX, XS-3XL",
+        price: 14.90,
+        originalPrice: null,
+        colors: [
+            { name: "White", hex: "#ffffff" },
+            { name: "Black", hex: "#000000" },
+            { name: "Navy", hex: "#1a237e" }
+        ],
+        rating: 4.3,
+        reviewCount: 67,
+        offer: null,
         gradient: "linear-gradient(135deg, #e74c3c 0%, #c0392b 100%)",
-        category: "bold"
+        image: null
     },
     {
         id: 8,
-        name: "Charcoal Gray Modern",
-        description: "Contemporary charcoal tee with modern fit and versatile styling",
-        price: 23.99,
-        color: "#7f8c8d",
-        gradient: "linear-gradient(135deg, #7f8c8d 0%, #95a5a6 100%)",
-        category: "modern"
+        name: "Oversized Crew Neck Short Sleeve T-Shirt",
+        category: "MEN, XS-3XL",
+        price: 12.90,
+        originalPrice: null,
+        colors: [
+            { name: "White", hex: "#ffffff" },
+            { name: "Beige", hex: "#f5f5dc" },
+            { name: "Gray", hex: "#9e9e9e" },
+            { name: "Black", hex: "#000000" }
+        ],
+        rating: 4.2,
+        reviewCount: 43,
+        offer: null,
+        gradient: "linear-gradient(135deg, #f5f5dc 0%, #ddd8c7 100%)",
+        image: "images/9b056001-0ce9-470f-9633-3fc9a45ee3fa.png"
     }
 ];
 
-// Shopping cart
+// Shopping cart and favorites
 let cart = [];
+let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
 
 // DOM elements
 const productGrid = document.getElementById('productGrid');
@@ -98,7 +161,7 @@ document.addEventListener('DOMContentLoaded', function() {
     loadProducts();
     updateCartDisplay();
     initializeNavigation();
-    initializeAnimations();
+    initializeFilters();
 });
 
 // Load products into the grid
@@ -117,7 +180,7 @@ function loadProducts() {
         
         // Add animation to product cards
         animateProductCards();
-    }, 1000);
+    }, 800);
 }
 
 // Create product card element
@@ -125,41 +188,109 @@ function createProductCard(product) {
     const card = document.createElement('div');
     card.className = 'product-card';
     
-    // Create badge HTML if product has a badge
-    const badgeHtml = product.badge ? `<div class="product-badge">${product.badge}</div>` : '';
+    // Create color swatches
+    const colorSwatchesHtml = product.colors.map((color, index) => 
+        `<div class="color-swatch ${index === 0 ? 'active' : ''}" 
+              style="background-color: ${color.hex};" 
+              title="${color.name}"
+              onclick="selectColor(${product.id}, ${index})"></div>`
+    ).join('');
     
-    // Create price HTML with original price if available
-    const priceHtml = product.originalPrice ? 
-        `<div class="product-price">
-            $${product.price} 
-            <span style="text-decoration: line-through; color: #999; font-size: 1rem; margin-left: 8px;">$${product.originalPrice}</span>
-        </div>` :
-        `<div class="product-price">$${product.price}</div>`;
+    // Create rating stars
+    const fullStars = Math.floor(product.rating);
+    const hasHalfStar = product.rating % 1 !== 0;
+    const emptyStars = 5 - fullStars - (hasHalfStar ? 1 : 0);
     
-    // Create image content - use actual image if available, otherwise use styled mockup
+    const starsHtml = 
+        '★'.repeat(fullStars) + 
+        (hasHalfStar ? '☆' : '') + 
+        '☆'.repeat(emptyStars);
+    
+    // Create offer badge if available
+    const offerBadgeHtml = product.offer ? 
+        `<div class="offer-badge">${product.offer}</div>` : '';
+    
+    // Create image content
     const imageContent = product.image ? 
-        `<img src="${product.image}" alt="${product.name}" style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;">` :
+        `<img src="${product.image}" alt="${product.name}">` :
         `<div class="tshirt-mockup">
             <div class="tshirt-base" style="background: ${product.gradient};">
                 <div class="tshirt-display">👕</div>
             </div>
         </div>`;
 
+    // Check if product is in favorites
+    const isFavorite = favorites.includes(product.id);
+
     card.innerHTML = `
-        <div class="product-image" style="background: ${product.gradient};">
-            ${badgeHtml}
+        <div class="product-image" style="background: #f5f5f5;">
+            ${offerBadgeHtml}
+            <button class="favorite-heart ${isFavorite ? 'active' : ''}" onclick="toggleFavorite(${product.id})">
+                <i class="fa${isFavorite ? 's' : 'r'} fa-heart"></i>
+            </button>
             ${imageContent}
         </div>
         <div class="product-info">
-            <h3>${product.name}</h3>
-            <p>${product.description}</p>
-            ${priceHtml}
-            <button class="add-to-cart" onclick="addToCart(${product.id})">
-                Add to Cart
-            </button>
+            <div class="color-swatches">
+                ${colorSwatchesHtml}
+            </div>
+            <div class="product-category">${product.category}</div>
+            <div class="product-name">${product.name}</div>
+            <div class="product-price">
+                $${product.price}
+                ${product.originalPrice ? `<span class="original-price">$${product.originalPrice}</span>` : ''}
+            </div>
+            ${product.offer ? `<div class="product-offer">${product.offer}</div>` : ''}
+            <div class="product-rating">
+                <span class="rating-stars">${starsHtml}</span>
+                <span>${product.rating} (${product.reviewCount})</span>
+            </div>
         </div>
     `;
+    
+    // Add click event to add to cart when clicking on the card (except interactive elements)
+    card.addEventListener('click', function(e) {
+        if (!e.target.closest('.favorite-heart') && !e.target.closest('.color-swatch')) {
+            addToCart(product.id);
+        }
+    });
+    
     return card;
+}
+
+// Select color swatch
+function selectColor(productId, colorIndex) {
+    const productCard = document.querySelector(`[data-product-id="${productId}"]`) || 
+                       Array.from(document.querySelectorAll('.product-card')).find(card => 
+                           card.innerHTML.includes(`onclick="selectColor(${productId},`));
+    
+    if (productCard) {
+        const swatches = productCard.querySelectorAll('.color-swatch');
+        swatches.forEach((swatch, index) => {
+            swatch.classList.toggle('active', index === colorIndex);
+        });
+    }
+}
+
+// Toggle favorite
+function toggleFavorite(productId) {
+    const index = favorites.indexOf(productId);
+    const heartButton = document.querySelector(`[onclick="toggleFavorite(${productId})"]`);
+    const heartIcon = heartButton.querySelector('i');
+    
+    if (index > -1) {
+        favorites.splice(index, 1);
+        heartButton.classList.remove('active');
+        heartIcon.className = 'far fa-heart';
+        showNotification('Removed from favorites', 'info');
+    } else {
+        favorites.push(productId);
+        heartButton.classList.add('active');
+        heartIcon.className = 'fas fa-heart';
+        showNotification('Added to favorites', 'success');
+    }
+    
+    localStorage.setItem('favorites', JSON.stringify(favorites));
 }
 
 // Add product to cart
@@ -179,9 +310,7 @@ function addToCart(productId) {
         
         updateCartDisplay();
         showAddToCartAnimation();
-        
-        // Show success message
-        showNotification('Product added to cart!', 'success');
+        showNotification('Added to cart!', 'success');
     }
 }
 
@@ -189,7 +318,7 @@ function addToCart(productId) {
 function removeFromCart(productId) {
     cart = cart.filter(item => item.id !== productId);
     updateCartDisplay();
-    showNotification('Product removed from cart!', 'info');
+    showNotification('Removed from cart', 'info');
 }
 
 // Update cart display
@@ -197,13 +326,13 @@ function updateCartDisplay() {
     // Update cart count
     const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
     cartCount.textContent = totalItems;
+    cartCount.style.display = totalItems > 0 ? 'flex' : 'none';
     
     // Update cart items
     if (cart.length === 0) {
         cartItems.innerHTML = '<div class="empty-cart">Your cart is empty</div>';
     } else {
         cartItems.innerHTML = cart.map(item => {
-            // Create image content - use actual image if available, otherwise use styled mockup
             const imageContent = item.image ? 
                 `<img src="${item.image}" alt="${item.name}" class="cart-item-image">` :
                 `<div class="cart-item-mockup" style="background: ${item.gradient};">
@@ -218,10 +347,14 @@ function updateCartDisplay() {
                     <div class="cart-item-info">
                         <h4>${item.name}</h4>
                         <p>Quantity: ${item.quantity}</p>
+                        <p>Size: M</p>
                     </div>
                     <div class="cart-item-price">
                         $${(item.price * item.quantity).toFixed(2)}
-                        <button onclick="removeFromCart(${item.id})" style="margin-left: 10px; background: #e74c3c; color: white; border: none; padding: 5px 10px; border-radius: 5px; cursor: pointer;">Remove</button>
+                        <button onclick="removeFromCart(${item.id})" 
+                                style="display: block; margin-top: 8px; background: #ff0000; color: white; border: none; padding: 4px 8px; border-radius: 3px; cursor: pointer; font-size: 11px;">
+                            Remove
+                        </button>
                     </div>
                 </div>
             `;
@@ -245,103 +378,157 @@ function checkout() {
         return;
     }
     
-    const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
-    const itemCount = cart.reduce((sum, item) => sum + item.quantity, 0);
+    toggleCart();
+    openCheckout();
+}
+
+// Open checkout modal
+function openCheckout() {
+    const checkoutModal = document.getElementById('checkoutModal');
+    const checkoutItems = document.getElementById('checkoutItems');
+    const checkoutTotal = document.getElementById('checkoutTotal');
     
-    // Simulate checkout process
+    // Display order summary
+    checkoutItems.innerHTML = cart.map(item => {
+        const imageContent = item.image ? 
+            `<img src="${item.image}" alt="${item.name}" class="checkout-item-image">` :
+            `<div class="checkout-item-mockup" style="background: ${item.gradient};">
+                <div class="checkout-mockup-display">👕</div>
+            </div>`;
+        
+        return `
+            <div class="checkout-item">
+                <div class="checkout-item-image-container">
+                    ${imageContent}
+                </div>
+                <div class="checkout-item-info">
+                    <h5>${item.name}</h5>
+                    <p>Quantity: ${item.quantity} | Size: M</p>
+                    <p class="checkout-item-price">$${(item.price * item.quantity).toFixed(2)}</p>
+                </div>
+            </div>
+        `;
+    }).join('');
+    
+    // Update total
+    const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+    checkoutTotal.textContent = total.toFixed(2);
+    
+    // Show modal
+    checkoutModal.style.display = 'block';
+    
+    // Add form submit handler
+    const checkoutForm = document.getElementById('checkoutForm');
+    checkoutForm.onsubmit = handleCheckoutSubmit;
+}
+
+// Close checkout modal
+function closeCheckout() {
+    const checkoutModal = document.getElementById('checkoutModal');
+    checkoutModal.style.display = 'none';
+    
+    // Reset form
+    const checkoutForm = document.getElementById('checkoutForm');
+    checkoutForm.reset();
+}
+
+// Handle checkout form submission
+function handleCheckoutSubmit(event) {
+    event.preventDefault();
+    
+    const formData = new FormData(event.target);
+    const customerInfo = {
+        firstName: formData.get('firstName'),
+        lastName: formData.get('lastName'),
+        email: formData.get('email'),
+        phone: formData.get('phone'),
+        address: formData.get('address'),
+        city: formData.get('city'),
+        state: formData.get('state'),
+        zipCode: formData.get('zipCode'),
+        country: formData.get('country'),
+        specialInstructions: formData.get('specialInstructions')
+    };
+    
     showNotification('Processing your order...', 'info');
     
     setTimeout(() => {
-        alert(`Thank you for your purchase!\n\nOrder Summary:\n${itemCount} items\nTotal: $${total.toFixed(2)}\n\nYour order will be shipped within 2-3 business days.`);
-        
-        // Clear cart
+        closeCheckout();
+        showThankYou(customerInfo);
         cart = [];
         updateCartDisplay();
-        toggleCart();
-        
         showNotification('Order placed successfully!', 'success');
     }, 2000);
 }
 
-// Scroll to products section
-function scrollToProducts() {
-    document.getElementById('products').scrollIntoView({
-        behavior: 'smooth'
-    });
+// Show thank you modal
+function showThankYou(customerInfo) {
+    const thankYouModal = document.getElementById('thankYouModal');
+    const deliveryAddress = document.getElementById('deliveryAddress');
+    const orderSummary = document.getElementById('orderSummary');
+    
+    deliveryAddress.innerHTML = `
+        <div class="address-info">
+            <p><strong>${customerInfo.firstName} ${customerInfo.lastName}</strong></p>
+            <p>${customerInfo.address}</p>
+            <p>${customerInfo.city}, ${customerInfo.state} ${customerInfo.zipCode}</p>
+            <p>${customerInfo.country}</p>
+            ${customerInfo.specialInstructions ? `<p><em>Special Instructions: ${customerInfo.specialInstructions}</em></p>` : ''}
+        </div>
+    `;
+    
+    const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+    const itemCount = cart.reduce((sum, item) => sum + item.quantity, 0);
+    
+    orderSummary.innerHTML = `
+        <div class="final-order-info">
+            <p><strong>Items:</strong> ${itemCount} item${itemCount > 1 ? 's' : ''}</p>
+            <p><strong>Total:</strong> $${total.toFixed(2)}</p>
+            <p><strong>Email:</strong> ${customerInfo.email}</p>
+            <p><strong>Phone:</strong> ${customerInfo.phone}</p>
+        </div>
+    `;
+    
+    thankYouModal.style.display = 'block';
 }
 
-// Contact form submission
-function submitForm(event) {
-    event.preventDefault();
-    
-    const form = event.target;
-    const formData = new FormData(form);
-    
-    // Simulate form submission
-    showNotification('Sending message...', 'info');
-    
-    setTimeout(() => {
-        showNotification('Message sent successfully! We\'ll get back to you soon.', 'success');
-        form.reset();
-    }, 1500);
+// Close thank you modal
+function closeThankYou() {
+    const thankYouModal = document.getElementById('thankYouModal');
+    thankYouModal.style.display = 'none';
 }
 
 // Initialize navigation
 function initializeNavigation() {
-    const hamburger = document.querySelector('.hamburger');
-    const navMenu = document.querySelector('.nav-menu');
-    
-    if (hamburger && navMenu) {
-        hamburger.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-        });
-        
-        // Close menu when clicking on a link
-        document.querySelectorAll('.nav-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                navMenu.classList.remove('active');
-            });
-        });
-    }
-    
-    // Smooth scrolling for navigation links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
+    // Navigation link interactions
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', function(e) {
             e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
+            
+            // Remove active class from all links
+            document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+            
+            // Add active class to clicked link
+            this.classList.add('active');
+            
+            // You could add filtering logic here based on the clicked category
+            showNotification(`Viewing: ${this.textContent}`, 'info');
         });
     });
 }
 
-// Initialize animations
-function initializeAnimations() {
-    // Intersection Observer for scroll animations
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-    
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
+// Initialize filters
+function initializeFilters() {
+    document.querySelectorAll('.filter-select').forEach(select => {
+        select.addEventListener('change', function() {
+            const filterType = this.options[0].text;
+            const selectedValue = this.value;
+            
+            if (selectedValue !== this.options[0].value) {
+                showNotification(`Filter applied: ${filterType} - ${selectedValue}`, 'info');
+                // Add actual filtering logic here
             }
         });
-    }, observerOptions);
-    
-    // Observe sections for scroll animations
-    document.querySelectorAll('.about, .contact, .footer').forEach(section => {
-        section.style.opacity = '0';
-        section.style.transform = 'translateY(30px)';
-        section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        observer.observe(section);
     });
 }
 
@@ -350,13 +537,13 @@ function animateProductCards() {
     const cards = document.querySelectorAll('.product-card');
     cards.forEach((card, index) => {
         card.style.opacity = '0';
-        card.style.transform = 'translateY(30px)';
-        card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        card.style.transform = 'translateY(20px)';
+        card.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
         
         setTimeout(() => {
             card.style.opacity = '1';
             card.style.transform = 'translateY(0)';
-        }, index * 100);
+        }, index * 50);
     });
 }
 
@@ -364,12 +551,12 @@ function animateProductCards() {
 function showAddToCartAnimation() {
     const cartIcon = document.querySelector('.cart-icon');
     if (cartIcon) {
-        cartIcon.style.transform = 'scale(1.2)';
-        cartIcon.style.transition = 'transform 0.3s ease';
+        cartIcon.style.transform = 'scale(1.1)';
+        cartIcon.style.transition = 'transform 0.2s ease';
         
         setTimeout(() => {
             cartIcon.style.transform = 'scale(1)';
-        }, 300);
+        }, 200);
     }
 }
 
@@ -385,22 +572,6 @@ function showNotification(message, type = 'info') {
     const notification = document.createElement('div');
     notification.className = `notification notification-${type}`;
     notification.textContent = message;
-    
-    // Style the notification
-    notification.style.cssText = `
-        position: fixed;
-        top: 100px;
-        right: 20px;
-        background: ${type === 'success' ? '#27ae60' : type === 'warning' ? '#f39c12' : '#3498db'};
-        color: white;
-        padding: 15px 20px;
-        border-radius: 8px;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-        z-index: 3000;
-        font-weight: bold;
-        transform: translateX(100%);
-        transition: transform 0.3s ease;
-    `;
     
     document.body.appendChild(notification);
     
@@ -420,60 +591,49 @@ function showNotification(message, type = 'info') {
     }, 3000);
 }
 
-// Close cart when clicking outside
+// Close modals when clicking outside
 window.addEventListener('click', function(event) {
+    const checkoutModal = document.getElementById('checkoutModal');
+    const thankYouModal = document.getElementById('thankYouModal');
+    
     if (event.target === cartModal) {
         toggleCart();
     }
-});
-
-// Handle window resize
-window.addEventListener('resize', function() {
-    const navMenu = document.querySelector('.nav-menu');
-    if (window.innerWidth > 768 && navMenu) {
-        navMenu.classList.remove('active');
+    if (event.target === checkoutModal) {
+        closeCheckout();
+    }
+    if (event.target === thankYouModal) {
+        closeThankYou();
     }
 });
 
-// Add keyboard navigation support
+// Handle keyboard navigation
 document.addEventListener('keydown', function(event) {
-    // Close cart with Escape key
-    if (event.key === 'Escape' && cartModal.style.display === 'block') {
-        toggleCart();
+    const checkoutModal = document.getElementById('checkoutModal');
+    const thankYouModal = document.getElementById('thankYouModal');
+    
+    if (event.key === 'Escape') {
+        if (cartModal.style.display === 'block') {
+            toggleCart();
+        } else if (checkoutModal && checkoutModal.style.display === 'block') {
+            closeCheckout();
+        } else if (thankYouModal && thankYouModal.style.display === 'block') {
+            closeThankYou();
+        }
     }
 });
 
-// Lazy loading for better performance
-function lazyLoadImages() {
-    const images = document.querySelectorAll('img[data-src]');
-    const imageObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const img = entry.target;
-                img.src = img.dataset.src;
-                img.classList.remove('lazy');
-                imageObserver.unobserve(img);
-            }
-        });
-    });
-    
-    images.forEach(img => imageObserver.observe(img));
-}
-
-// Initialize lazy loading
-document.addEventListener('DOMContentLoaded', lazyLoadImages);
-
-// Add search functionality (bonus feature)
+// Search functionality
 function searchProducts(query) {
     const filteredProducts = products.filter(product => 
         product.name.toLowerCase().includes(query.toLowerCase()) ||
-        product.description.toLowerCase().includes(query.toLowerCase())
+        product.category.toLowerCase().includes(query.toLowerCase())
     );
     
     productGrid.innerHTML = '';
     
     if (filteredProducts.length === 0) {
-        productGrid.innerHTML = '<div class="no-results">No products found matching your search.</div>';
+        productGrid.innerHTML = '<div class="loading">No products found matching your search.</div>';
     } else {
         filteredProducts.forEach(product => {
             const productCard = createProductCard(product);
@@ -483,39 +643,57 @@ function searchProducts(query) {
     }
 }
 
-// Add to favorites functionality (bonus feature)
-let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
-
-function toggleFavorite(productId) {
-    const index = favorites.indexOf(productId);
-    if (index > -1) {
-        favorites.splice(index, 1);
-        showNotification('Removed from favorites', 'info');
-    } else {
-        favorites.push(productId);
-        showNotification('Added to favorites', 'success');
+// Filter by category
+function filterByCategory(category) {
+    let filteredProducts = products;
+    
+    if (category && category !== 'all') {
+        filteredProducts = products.filter(product => 
+            product.category.toLowerCase().includes(category.toLowerCase())
+        );
     }
     
-    localStorage.setItem('favorites', JSON.stringify(favorites));
-    updateFavoriteButtons();
+    productGrid.innerHTML = '';
+    
+    if (filteredProducts.length === 0) {
+        productGrid.innerHTML = '<div class="loading">No products found in this category.</div>';
+    } else {
+        filteredProducts.forEach(product => {
+            const productCard = createProductCard(product);
+            productGrid.appendChild(productCard);
+        });
+        animateProductCards();
+    }
 }
 
-function updateFavoriteButtons() {
-    // This would update favorite button states if we had them in the UI
-    // Implementation depends on UI design
-}
-
-// Performance optimization: Debounce function
-function debounce(func, wait) {
-    let timeout;
-    return function executedFunction(...args) {
-        const later = () => {
-            clearTimeout(timeout);
-            func(...args);
-        };
-        clearTimeout(timeout);
-        timeout = setTimeout(later, wait);
-    };
+// Sort products
+function sortProducts(sortBy) {
+    let sortedProducts = [...products];
+    
+    switch (sortBy) {
+        case 'price-low':
+            sortedProducts.sort((a, b) => a.price - b.price);
+            break;
+        case 'price-high':
+            sortedProducts.sort((a, b) => b.price - a.price);
+            break;
+        case 'rating':
+            sortedProducts.sort((a, b) => b.rating - a.rating);
+            break;
+        case 'name':
+            sortedProducts.sort((a, b) => a.name.localeCompare(b.name));
+            break;
+        default:
+            // Keep original order
+            break;
+    }
+    
+    productGrid.innerHTML = '';
+    sortedProducts.forEach(product => {
+        const productCard = createProductCard(product);
+        productGrid.appendChild(productCard);
+    });
+    animateProductCards();
 }
 
 // Export functions for testing (if needed)
@@ -525,6 +703,8 @@ if (typeof module !== 'undefined' && module.exports) {
         removeFromCart,
         updateCartDisplay,
         searchProducts,
+        filterByCategory,
+        sortProducts,
         products
     };
 }

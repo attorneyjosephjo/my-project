@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TeeStyle - Premium T-Shirts</title>
+    <title>UNISTYLE - Premium T-Shirts</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
@@ -13,118 +13,92 @@
         <nav class="navbar">
             <div class="nav-container">
                 <div class="logo">
-                    <h2><i class="fas fa-tshirt"></i> TeeStyle</h2>
+                    <div class="logo-box">UNI</div>
+                    <div class="logo-box">STYLE</div>
                 </div>
                 <ul class="nav-menu">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#products">Products</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="#" class="cart-icon" onclick="toggleCart()">
-                        <i class="fas fa-shopping-cart"></i>
-                        <span class="cart-count" id="cartCount">0</span>
-                    </a></li>
+                    <li><a href="#" class="nav-link active">All T-Shirts & Sweats</a></li>
+                    <li><a href="#" class="nav-link">T-Shirts</a></li>
+                    <li><a href="#" class="nav-link">Sweatshirts & Hoodies</a></li>
+                    <li><a href="#" class="nav-link">UT Graphic Tees</a></li>
+                    <li><a href="#" class="nav-link">PEACE FOR ALL</a></li>
+                    <li><a href="#" class="nav-link">Fleece</a></li>
                 </ul>
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                <div class="header-icons">
+                    <i class="far fa-heart" title="Favorites"></i>
+                    <div class="cart-icon" onclick="toggleCart()">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </div>
                 </div>
             </div>
         </nav>
+        
+        <!-- Filter Bar -->
+        <div class="filter-bar">
+            <div class="filter-container">
+                <div class="filter-group">
+                    <i class="fas fa-filter"></i>
+                    <select class="filter-select">
+                        <option>In-stock: online only</option>
+                        <option>All items</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <select class="filter-select">
+                        <option>T-Shirts</option>
+                        <option>All Categories</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <select class="filter-select">
+                        <option>Options</option>
+                        <option>Size</option>
+                        <option>Color</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <select class="filter-select">
+                        <option>Size</option>
+                        <option>XS</option>
+                        <option>S</option>
+                        <option>M</option>
+                        <option>L</option>
+                        <option>XL</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <select class="filter-select">
+                        <option>Color</option>
+                        <option>White</option>
+                        <option>Black</option>
+                        <option>Gray</option>
+                        <option>Blue</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <select class="filter-select">
+                        <option>Price</option>
+                        <option>Low to High</option>
+                        <option>High to Low</option>
+                    </select>
+                </div>
+            </div>
+        </div>
     </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Premium Quality T-Shirts</h1>
-            <p>Discover our collection of comfortable, stylish, and affordable t-shirts for every occasion.</p>
-            <button class="cta-button" onclick="scrollToProducts()">Shop Now</button>
-        </div>
-    </section>
-
-    <!-- Products Section -->
-    <section id="products" class="products">
+    <!-- Main Content -->
+    <main class="main-content">
         <div class="container">
-            <h2 class="section-title">Our Products</h2>
+            <!-- Section Title -->
+            <h1 class="section-title">Short Sleeve</h1>
+            
+            <!-- Product Grid -->
             <div class="product-grid" id="productGrid">
                 <!-- Products will be dynamically loaded here -->
             </div>
         </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <h2>About TeeStyle</h2>
-                    <p>We are passionate about creating high-quality, comfortable t-shirts that express your unique style. Our mission is to provide premium clothing at affordable prices while maintaining sustainable and ethical manufacturing practices.</p>
-                    <div class="features">
-                        <div class="feature">
-                            <i class="fas fa-leaf"></i>
-                            <h3>Eco-Friendly</h3>
-                            <p>Made from sustainable materials</p>
-                        </div>
-                        <div class="feature">
-                            <i class="fas fa-award"></i>
-                            <h3>Premium Quality</h3>
-                            <p>Durable and comfortable fabrics</p>
-                        </div>
-                        <div class="feature">
-                            <i class="fas fa-shipping-fast"></i>
-                            <h3>Fast Shipping</h3>
-                            <p>Quick delivery worldwide</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-image">
-                    <div class="placeholder-image">
-                        <i class="fas fa-tshirt"></i>
-                        <p>Quality T-Shirts</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Contact Us</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <h3>Address</h3>
-                            <p>123 Fashion Street, Style City, SC 12345</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <div>
-                            <h3>Phone</h3>
-                            <p>+1 (555) 123-4567</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <h3>Email</h3>
-                            <p>info@teestyle.com</p>
-                        </div>
-                    </div>
-                </div>
-                <form class="contact-form" onsubmit="submitForm(event)">
-                    <input type="text" placeholder="Your Name" required>
-                    <input type="email" placeholder="Your Email" required>
-                    <textarea placeholder="Your Message" rows="5" required></textarea>
-                    <button type="submit">Send Message</button>
-                </form>
-            </div>
-        </div>
-    </section>
+    </main>
 
     <!-- Shopping Cart Modal -->
     <div id="cartModal" class="cart-modal">
@@ -145,43 +119,126 @@
         </div>
     </div>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3><i class="fas fa-tshirt"></i> TeeStyle</h3>
-                    <p>Premium quality t-shirts for every style and occasion.</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
+    <!-- Checkout Modal -->
+    <div id="checkoutModal" class="checkout-modal">
+        <div class="checkout-content">
+            <div class="checkout-header">
+                <h3>Checkout</h3>
+                <span class="close-checkout" onclick="closeCheckout()">&times;</span>
+            </div>
+            <div class="checkout-body">
+                <div class="order-summary">
+                    <h4>Order Summary</h4>
+                    <div id="checkoutItems" class="checkout-items">
+                        <!-- Order items will be displayed here -->
+                    </div>
+                    <div class="checkout-total">
+                        <strong>Total: $<span id="checkoutTotal">0.00</span></strong>
                     </div>
                 </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#products">Products</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Customer Service</h4>
-                    <ul>
-                        <li><a href="#">Size Guide</a></li>
-                        <li><a href="#">Shipping Info</a></li>
-                        <li><a href="#">Returns</a></li>
-                        <li><a href="#">FAQ</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 TeeStyle. All rights reserved.</p>
+                
+                <form id="checkoutForm" class="checkout-form">
+                    <h4>Delivery Information</h4>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">First Name *</label>
+                            <input type="text" id="firstName" name="firstName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name *</label>
+                            <input type="text" id="lastName" name="lastName" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="address">Street Address *</label>
+                        <input type="text" id="address" name="address" required>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="city">City *</label>
+                            <input type="text" id="city" name="city" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="state">State/Province *</label>
+                            <input type="text" id="state" name="state" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="zipCode">ZIP/Postal Code *</label>
+                            <input type="text" id="zipCode" name="zipCode" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="country">Country *</label>
+                            <select id="country" name="country" required>
+                                <option value="">Select Country</option>
+                                <option value="US">United States</option>
+                                <option value="CA">Canada</option>
+                                <option value="UK">United Kingdom</option>
+                                <option value="AU">Australia</option>
+                                <option value="DE">Germany</option>
+                                <option value="FR">France</option>
+                                <option value="JP">Japan</option>
+                                <option value="KR">South Korea</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="specialInstructions">Special Delivery Instructions (Optional)</label>
+                        <textarea id="specialInstructions" name="specialInstructions" rows="3" placeholder="Leave at door, ring bell, etc."></textarea>
+                    </div>
+                    
+                    <div class="checkout-actions">
+                        <button type="button" class="btn-secondary" onclick="closeCheckout()">Back to Cart</button>
+                        <button type="submit" class="btn-primary">Complete Order</button>
+                    </div>
+                </form>
             </div>
         </div>
-    </footer>
+    </div>
+
+    <!-- Thank You Modal -->
+    <div id="thankYouModal" class="thank-you-modal">
+        <div class="thank-you-content">
+            <div class="thank-you-header">
+                <i class="fas fa-check-circle"></i>
+                <h2>Thank You for Your Purchase!</h2>
+            </div>
+            <div class="thank-you-body">
+                <p>Your order has been successfully placed and will be delivered to:</p>
+                <div id="deliveryAddress" class="delivery-address">
+                    <!-- Delivery address will be displayed here -->
+                </div>
+                <div class="order-details">
+                    <h4>Order Details:</h4>
+                    <div id="orderSummary" class="order-summary-final">
+                        <!-- Final order summary will be displayed here -->
+                    </div>
+                </div>
+                <p class="delivery-info">
+                    <i class="fas fa-shipping-fast"></i>
+                    Your t-shirts will be delivered within 2-3 business days.
+                </p>
+                <button class="btn-primary" onclick="closeThankYou()">Continue Shopping</button>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
