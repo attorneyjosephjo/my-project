@@ -1,46 +1,85 @@
-// Product data
+// Product data with enhanced demo t-shirts
 const products = [
     {
         id: 1,
-        name: "Classic White Tee",
-        description: "Comfortable cotton t-shirt perfect for everyday wear",
-        price: 19.99,
-        image: "👕"
+        name: "Classic White Essential",
+        description: "Premium 100% organic cotton tee with perfect fit and ultra-soft feel",
+        price: 24.99,
+        originalPrice: 29.99,
+        color: "#ffffff",
+        gradient: "linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%)",
+        badge: "Bestseller",
+        category: "essentials",
+        image: "images/b36155f5-bf23-4cfe-8c0a-e7d4c648c091.png"
     },
     {
         id: 2,
-        name: "Vintage Black Tee",
-        description: "Retro-style black t-shirt with premium fabric",
-        price: 24.99,
-        image: "🖤"
+        name: "Midnight Black Premium",
+        description: "Luxurious black tee with superior fabric quality and modern cut",
+        price: 27.99,
+        originalPrice: 32.99,
+        color: "#2c3e50",
+        gradient: "linear-gradient(135deg, #2c3e50 0%, #34495e 100%)",
+        badge: "Premium",
+        category: "premium",
+        image: "images/9b056001-0ce9-470f-9633-3fc9a45ee3fa.png"
     },
     {
         id: 3,
-        name: "Graphic Print Tee",
-        description: "Trendy graphic design on soft cotton blend",
-        price: 29.99,
-        image: "🎨"
+        name: "Ocean Blue Comfort",
+        description: "Breathable cotton blend in stunning ocean blue with relaxed fit",
+        price: 22.99,
+        color: "#3498db",
+        gradient: "linear-gradient(135deg, #3498db 0%, #2980b9 100%)",
+        category: "comfort"
     },
     {
         id: 4,
-        name: "Premium Navy Tee",
-        description: "High-quality navy blue t-shirt for professionals",
-        price: 34.99,
-        image: "💙"
+        name: "Forest Green Eco",
+        description: "Sustainable bamboo-cotton blend tee in earthy forest green",
+        price: 29.99,
+        color: "#27ae60",
+        gradient: "linear-gradient(135deg, #27ae60 0%, #229954 100%)",
+        badge: "Eco-Friendly",
+        category: "eco"
     },
     {
         id: 5,
-        name: "Eco-Friendly Green Tee",
-        description: "Sustainable organic cotton t-shirt",
-        price: 27.99,
-        image: "🌱"
+        name: "Sunset Orange Vintage",
+        description: "Retro-inspired tee with vintage wash and comfortable vintage fit",
+        price: 26.99,
+        color: "#e67e22",
+        gradient: "linear-gradient(135deg, #e67e22 0%, #d35400 100%)",
+        badge: "Vintage",
+        category: "vintage"
     },
     {
         id: 6,
-        name: "Sports Performance Tee",
-        description: "Moisture-wicking athletic t-shirt",
-        price: 39.99,
-        image: "⚡"
+        name: "Royal Purple Elite",
+        description: "Sophisticated purple tee with premium fabric and elegant design",
+        price: 31.99,
+        color: "#9b59b6",
+        gradient: "linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%)",
+        badge: "Elite",
+        category: "premium"
+    },
+    {
+        id: 7,
+        name: "Crimson Red Bold",
+        description: "Eye-catching red tee perfect for making a statement with confidence",
+        price: 25.99,
+        color: "#e74c3c",
+        gradient: "linear-gradient(135deg, #e74c3c 0%, #c0392b 100%)",
+        category: "bold"
+    },
+    {
+        id: 8,
+        name: "Charcoal Gray Modern",
+        description: "Contemporary charcoal tee with modern fit and versatile styling",
+        price: 23.99,
+        color: "#7f8c8d",
+        gradient: "linear-gradient(135deg, #7f8c8d 0%, #95a5a6 100%)",
+        category: "modern"
     }
 ];
 
@@ -85,14 +124,36 @@ function loadProducts() {
 function createProductCard(product) {
     const card = document.createElement('div');
     card.className = 'product-card';
+    
+    // Create badge HTML if product has a badge
+    const badgeHtml = product.badge ? `<div class="product-badge">${product.badge}</div>` : '';
+    
+    // Create price HTML with original price if available
+    const priceHtml = product.originalPrice ? 
+        `<div class="product-price">
+            $${product.price} 
+            <span style="text-decoration: line-through; color: #999; font-size: 1rem; margin-left: 8px;">$${product.originalPrice}</span>
+        </div>` :
+        `<div class="product-price">$${product.price}</div>`;
+    
+    // Create image content - use actual image if available, otherwise use styled mockup
+    const imageContent = product.image ? 
+        `<img src="${product.image}" alt="${product.name}" style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;">` :
+        `<div class="tshirt-mockup">
+            <div class="tshirt-base" style="background: ${product.gradient};">
+                <div class="tshirt-display">👕</div>
+            </div>
+        </div>`;
+
     card.innerHTML = `
-        <div class="product-image">
-            <span style="font-size: 4rem;">${product.image}</span>
+        <div class="product-image" style="background: ${product.gradient};">
+            ${badgeHtml}
+            ${imageContent}
         </div>
         <div class="product-info">
             <h3>${product.name}</h3>
             <p>${product.description}</p>
-            <div class="product-price">$${product.price}</div>
+            ${priceHtml}
             <button class="add-to-cart" onclick="addToCart(${product.id})">
                 Add to Cart
             </button>
