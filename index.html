@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TeeStyle - Premium T-Shirts</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <h2><i class="fas fa-tshirt"></i> TeeStyle</h2>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#" class="cart-icon" onclick="toggleCart()">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Premium Quality T-Shirts</h1>
+            <p>Discover our collection of comfortable, stylish, and affordable t-shirts for every occasion.</p>
+            <button class="cta-button" onclick="scrollToProducts()">Shop Now</button>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <h2 class="section-title">Our Products</h2>
+            <div class="product-grid" id="productGrid">
+                <!-- Products will be dynamically loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About TeeStyle</h2>
+                    <p>We are passionate about creating high-quality, comfortable t-shirts that express your unique style. Our mission is to provide premium clothing at affordable prices while maintaining sustainable and ethical manufacturing practices.</p>
+                    <div class="features">
+                        <div class="feature">
+                            <i class="fas fa-leaf"></i>
+                            <h3>Eco-Friendly</h3>
+                            <p>Made from sustainable materials</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-award"></i>
+                            <h3>Premium Quality</h3>
+                            <p>Durable and comfortable fabrics</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-shipping-fast"></i>
+                            <h3>Fast Shipping</h3>
+                            <p>Quick delivery worldwide</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="placeholder-image">
+                        <i class="fas fa-tshirt"></i>
+                        <p>Quality T-Shirts</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Address</h3>
+                            <p>123 Fashion Street, Style City, SC 12345</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Phone</h3>
+                            <p>+1 (555) 123-4567</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p>info@teestyle.com</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" onsubmit="submitForm(event)">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message" rows="5" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shopping Cart Modal -->
+    <div id="cartModal" class="cart-modal">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h3>Shopping Cart</h3>
+                <span class="close-cart" onclick="toggleCart()">&times;</span>
+            </div>
+            <div class="cart-items" id="cartItems">
+                <!-- Cart items will be displayed here -->
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <strong>Total: $<span id="cartTotal">0.00</span></strong>
+                </div>
+                <button class="checkout-btn" onclick="checkout()">Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-tshirt"></i> TeeStyle</h3>
+                    <p>Premium quality t-shirts for every style and occasion.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="#">Size Guide</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 TeeStyle. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
