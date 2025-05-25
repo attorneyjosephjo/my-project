@@ -202,18 +202,30 @@ function updateCartDisplay() {
     if (cart.length === 0) {
         cartItems.innerHTML = '<div class="empty-cart">Your cart is empty</div>';
     } else {
-        cartItems.innerHTML = cart.map(item => `
-            <div class="cart-item">
-                <div class="cart-item-info">
-                    <h4>${item.name}</h4>
-                    <p>Quantity: ${item.quantity}</p>
+        cartItems.innerHTML = cart.map(item => {
+            // Create image content - use actual image if available, otherwise use styled mockup
+            const imageContent = item.image ? 
+                `<img src="${item.image}" alt="${item.name}" class="cart-item-image">` :
+                `<div class="cart-item-mockup" style="background: ${item.gradient};">
+                    <div class="cart-mockup-display">👕</div>
+                </div>`;
+            
+            return `
+                <div class="cart-item">
+                    <div class="cart-item-image-container">
+                        ${imageContent}
+                    </div>
+                    <div class="cart-item-info">
+                        <h4>${item.name}</h4>
+                        <p>Quantity: ${item.quantity}</p>
+                    </div>
+                    <div class="cart-item-price">
+                        $${(item.price * item.quantity).toFixed(2)}
+                        <button onclick="removeFromCart(${item.id})" style="margin-left: 10px; background: #e74c3c; color: white; border: none; padding: 5px 10px; border-radius: 5px; cursor: pointer;">Remove</button>
+                    </div>
                 </div>
-                <div class="cart-item-price">
-                    $${(item.price * item.quantity).toFixed(2)}
-                    <button onclick="removeFromCart(${item.id})" style="margin-left: 10px; background: #e74c3c; color: white; border: none; padding: 5px 10px; border-radius: 5px; cursor: pointer;">Remove</button>
-                </div>
-            </div>
-        `).join('');
+            `;
+        }).join('');
     }
     
     // Update total
